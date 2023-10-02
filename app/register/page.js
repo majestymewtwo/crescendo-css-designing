@@ -79,10 +79,38 @@ export default function About() {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <div className="flex space-x-4 justify-between">
-          <Image height={20} width={70} src='/gpay.png'title="Google Pay" className="cursor-pointer" />
-          <Image height={20} width={70} src='/upi.png' title="Other UPI" className="cursor-pointer" />
-          <Image height={20} width={70} src='/paytm.png' title="PayTM" className="cursor-pointer" />
+        <Select>
+          <SelectTrigger>Price</SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value='premium'>Premium - 25,000 Rs</SelectItem>
+              <SelectItem value='diamond'>Diamond - 12,000 Rs</SelectItem>
+              <SelectItem value='platinum'>Platinum - 5,000 Rs</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+        <div className='flex space-x-4 justify-between'>
+          <Image
+            height={20}
+            width={70}
+            src='/gpay.png'
+            title='Google Pay'
+            className='cursor-pointer'
+          />
+          <Image
+            height={20}
+            width={70}
+            src='/upi.png'
+            title='Other UPI'
+            className='cursor-pointer'
+          />
+          <Image
+            height={20}
+            width={70}
+            src='/paytm.png'
+            title='PayTM'
+            className='cursor-pointer'
+          />
         </div>
         <button
           onClick={createToast}
